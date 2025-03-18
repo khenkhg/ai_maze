@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+
+
 const mazeGrid = [
   ["A", "1", "2", "3"],
   ["4", "5", "6", "7"],
@@ -42,16 +44,21 @@ export default function MazeSolver() {
         Solve Maze
       </button>
       <div className="mt-5 grid grid-cols-4 gap-2">
-        {mazeGrid.flat().map((cell, index) => (
-          <div
-            key={index}
-            className={`w-16 h-16 flex items-center justify-center border text-lg font-bold 
-              ${path.includes(cell) ? "bg-green-300" : "bg-gray-100"}`}
-          >
-            {cell}
-          </div>
-        ))}
-      </div>
+  {mazeGrid.map((row, rowIndex) => (
+    <div key={rowIndex} className="flex">
+      {row.map((cell, colIndex) => (
+        <div
+          key={colIndex}
+          className={`w-16 h-16 flex items-center justify-center border text-lg font-bold 
+            ${path.includes(cell) ? "bg-green-300" : "bg-gray-100"}`}
+        >
+          {cell}
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }

@@ -1,0 +1,115 @@
+body {
+  background-color: #e0f7fa;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+}
+
+/* Center the welcome message vertically and horizontally */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome {
+  font-size: 36px;
+  color: #009688;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+  font-size: 28px;
+  color: #00796b;
+  text-shadow: 2px 2px #b2dfdb;
+}
+
+.maze-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  gap: 2px;
+  background-color: #d1f3f7;
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px dashed #009688;
+  width: fit-content;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #80cbc4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.wall {
+  background-color: #04534b;
+  border-radius: 10px;
+}
+
+.robot {
+  background-color: #35a79b;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #01463e;
+}
+
+.solution {
+  background-color: #aed581;
+}
+
+.explored {
+  background-color: #5dabcf;
+}
+
+.cute-btn {
+  background-color: #4dd0e1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 3px 3px #0097a7;
+}
+
+.cute-btn:hover {
+  background-color: #0097a7;
+  transform: scale(1.1);
+}
+
+.keyboard-note {
+  font-size: 16px;
+  color: #00796b;
+  margin-top: 10px;
+}
+
+.display-options {
+  margin-top: 10px;
+}
+
+.display-options label {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #00796b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.robot-icon {
+  font-size: 24px;
+  color: #a7f8f8;
+}
