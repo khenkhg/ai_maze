@@ -69,7 +69,7 @@ function MazeSolver() {
   };
 
   const fetchSolution = (algorithm) => {
-    fetch(`http://127.0.0.1:5000/solve?algorithm=${algorithm}`)
+    fetch(`https://ai-maze.onrender.com/solve?algorithm=${algorithm}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.solution && data.explored) {
